@@ -7,11 +7,11 @@
 # Task
 ![Alt text](img/beforeOne.png?raw=true "Optional Title")
 
-# Goal (Homepage)
+## Goal (Homepage)
 ![Alt text](img/rubric1.png?raw=true "Optional Title")
 
 # Critical Rendering Path Analysis (Loading Performance)
-## Tasks:
+### Tasks:
 1. Document Object Model (DOM)  construction
 ![Alt text](img/DOM.png?raw=true "Optional Title")
 2. CSS Object Model (CSSOM) construction
@@ -19,23 +19,23 @@
 3. Render Tree construction
 ![Alt text](img/RenderTree.png?raw=true "Optional Title")
 4. Javascript on the game:
-## Worst case scenario:
+### Worst case scenario:
 ![Alt text](img/worstcase.png?raw=true "Optional Title")
 ## Best case scenario:
 ![Alt text](img/bestcase.png?raw=true "Optional Title")
 
-# PageSpeed recommendations and rules:
-## JavaScript- und CSS-Code, die das Rendern blockieren, eliminieren
+## PageSpeed recommendations and rules:
+### JavaScript- und CSS-Code, die das Rendern blockieren, eliminieren
 1. JavaScript-Nutzung optimieren
 2. Asynchrone JavaScript-Ressourcen bevorzugen
 3. Parsen von JavaScript zurückstellen
 4. Lang ausgeführten JavaScript-Code vermeiden
-## CSS-Nutzung optimieren
+### CSS-Nutzung optimieren
 1. CSS in den Dokumentenkopf einfügen
 2. CSS-Importe vermeiden
 3. Rendering-blockierendes CSS inline einfügen
 
-# Procedure
+## Procedure
 1. Data compression: Eliminating unnecessary data.
 2. Minification: deleting comments and whitespaces.
 3. Text compression with Gzip in js, css and html files.
@@ -44,19 +44,19 @@
 6. Convert images to binary files.
 7. Open Sans asynchronously
 
-# Result
+## Result
 ![Alt text](img/pageSpeedOne.png?raw=true "Optional Title")
 
 # Task
 ![Alt text](img/problem2.png?raw=true "Optional Title")
 
-# Goal (Pizzapage)
+## Goal (Pizzapage)
 ![Alt text](img/rubric2.png?raw=true "Optional Title")
 
-# Pixel Pipeline Analysis
+## Pixel Pipeline Analysis
 
 
-# Procedure
+## Procedure
 1. Minimize main.js
 2. Code optimization
 
@@ -128,7 +128,7 @@ function changePizzaSizes(size) {
 }
 ```
 
-# Result
+## Result
 ![Alt text](img/after2and3.png?raw=true "Optional Title")
 
 Resize takes less than 5 ms
