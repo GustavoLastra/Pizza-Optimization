@@ -63,16 +63,17 @@
 - Paint: process of filling in pixels
 - Compositing: Since the parts of the page were drawn into potentially multiple layers they need to be drawn to the screen in the correct order so that the page renders correctly.
 
-## Recommendations for JavaScript Execution:
+## Considerations for JavaScript Execution:
 
 - Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
 - Move long-running JavaScript off the main thread to Web Workers.
 - Use micro-tasks to make DOM changes over several frames.
 - Use Chrome DevTools’ Timeline and JavaScript Profiler to assess the impact of JavaScript.
 
-## Recommendations for style calculations
+## Considerations for style calculations
 
-- Reduce the complexity of your selectors`
+- Reduce the complexity of your selectors; use a class-centric methodology like BEM.
+- Reduce the number of elements on which style calculation must be calculated.
 ### Not desired
 ```
 .box:nth-last-child(-n+1) .title {
@@ -85,7 +86,8 @@
   /* styles */
 }
 ```
-### Recommendations for Layout
+
+### Considerations for Layout
 
 - Layout is normally scoped to the whole document.
 - The number of DOM elements will affect performance; you should avoid triggering layout wherever possible.
@@ -98,14 +100,14 @@ The layout cost when using floats on 1,300 boxes. It is, admittedly, a contrived
 - Avoid forced synchronous layouts and layout thrashing; read style values then make style changes.
 
 
-### Recommendations for Paint
+### Considerations for Paint
 
 - Changing any property apart from transforms or opacity always triggers paint.
 - Paint is often the most expensive part of the pixel pipeline; avoid it where you can.
 - Reduce paint areas through layer promotion and orchestration of animations.
 - Use the Chrome DevTools paint profiler to assess paint complexity and cost; reduce where you can.
 
-### Recommendations for Compositing
+### Considerations for Compositing
 
 - Stick to transform and opacity changes for your animations.
 - Promote moving elements with will-change or translateZ.
