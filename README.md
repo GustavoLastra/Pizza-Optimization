@@ -11,6 +11,7 @@
 ![Alt text](img/rubric1.png?raw=true "Optional Title")
 
 # Critical Rendering Path Analysis (Loading Performance)
+
 ### Tasks:
 1. Document Object Model (DOM)  construction
 ![Alt text](img/DOM.png?raw=true "Optional Title")
@@ -21,7 +22,7 @@
 4. Javascript on the game:
 ### Worst case scenario:
 ![Alt text](img/worstcase.png?raw=true "Optional Title")
-## Best case scenario:
+### Best case scenario:
 ![Alt text](img/bestcase.png?raw=true "Optional Title")
 
 ## PageSpeed recommendations and rules:
@@ -55,6 +56,60 @@
 
 ## Pixel Pipeline Analysis
 
+![Alt text](img/Pipeline.png?raw=true "Optional Title")
+- Javascript: used to handle work that will result in visual changes, whether it’s jQuery’s animate function, sorting a data set, or adding DOM elements to the page.
+- Style calculations: process of figuring out which CSS rules apply to which elements based on matching selectors, for example, .headline or .nav > .nav__item.
+- Layout: Once the browser knows which rules apply to an element it can begin to calculate how much space it takes up and where it is on screen.
+- Paint: process of filling in pixels
+- Compositing: Since the parts of the page were drawn into potentially multiple layers they need to be drawn to the screen in the correct order so that the page renders correctly.
+
+## Recommendations for JavaScript Execution:
+
+- Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
+- Move long-running JavaScript off the main thread to Web Workers.
+- Use micro-tasks to make DOM changes over several frames.
+- Use Chrome DevTools’ Timeline and JavaScript Profiler to assess the impact of JavaScript.
+
+## Recommendations for style calculations
+
+- Reduce the complexity of your selectors`
+### Not desired
+```
+.box:nth-last-child(-n+1) .title {
+  /* styles */
+}
+```
+### Desired
+```
+.final-box-title {
+  /* styles */
+}
+```
+### Recommendations for Layout
+
+- Layout is normally scoped to the whole document.
+- The number of DOM elements will affect performance; you should avoid triggering layout wherever possible.
+- Assess layout model performance; new Flexbox is typically faster than older Flexbox or float-based layout models.
+The layout cost when using floats on 1,300 boxes. It is, admittedly, a contrived example, because most applications will use a variety of means to position elements.
+1. Without Flexbox:
+![Alt text](img/rubric2.png?raw=true "Optional Title")
+2. With Flexbox:
+![Alt text](img/rubric2.png?raw=true "Optional Title")
+- Avoid forced synchronous layouts and layout thrashing; read style values then make style changes.
+
+
+### Recommendations for Paint
+
+- Changing any property apart from transforms or opacity always triggers paint.
+- Paint is often the most expensive part of the pixel pipeline; avoid it where you can.
+- Reduce paint areas through layer promotion and orchestration of animations.
+- Use the Chrome DevTools paint profiler to assess paint complexity and cost; reduce where you can.
+
+### Recommendations for Compositing
+
+- Stick to transform and opacity changes for your animations.
+- Promote moving elements with will-change or translateZ.
+- Avoid overusing promotion rules; layers require memory and management.
 
 ## Procedure
 1. Minimize main.js
