@@ -4,13 +4,40 @@
 2. Paste the links of a page from my project on [Google's Pagespeed tester](https://developers.google.com/speed/pagespeed/insights/).
 
 
-### Before
+### Task
 
 ![Alt text](img/beforeOne.png?raw=true "Optional Title")
 
-#### Goal (Home view)
+#### Goal (Homepage)
 
 ![Alt text](img/rubric1.png?raw=true "Optional Title")
+
+### Analisys
+
+#### Critical Rendering Path  (Loading Performance)
+#####Tasks:
+1. Document Object Model (DOM)  construction
+![Alt text](img/DOM.png?raw=true "Optional Title")
+2. CSS Object Model (CSSOM) construction
+![Alt text](img/CSSOM.png?raw=true "Optional Title")
+3. Render Tree construction
+![Alt text](img/RenderTree.png?raw=true "Optional Title")
+4. Javascript on the game:
+####Worst case scenario:
+![Alt text](img/worstcase.png?raw=true "Optional Title")
+####Best case scenario:
+![Alt text](img/bestcase.png?raw=true "Optional Title")
+
+####PageSpeed recommendations and rules:
+#####JavaScript- und CSS-Code, die das Rendern blockieren, eliminieren
+1. JavaScript-Nutzung optimieren
+2. Asynchrone JavaScript-Ressourcen bevorzugen
+3. Parsen von JavaScript zurückstellen
+4. Lang ausgeführten JavaScript-Code vermeiden
+#####CSS-Nutzung optimieren
+1. CSS in den Dokumentenkopf einfügen
+2. CSS-Importe vermeiden
+3. Rendering-blockierendes CSS inline einfügen
 
 ### Procedure
 
@@ -26,14 +53,18 @@
 
 ![Alt text](img/pageSpeedOne.png?raw=true "Optional Title")
 
-#### Goal (Pizza View)
+#### Goal (Pizzapage)
 
 ![Alt text](img/rubric2.png?raw=true "Optional Title")
 
-#### Scroll Problem
+#### Task
 
 ![Alt text](img/problem2.png?raw=true "Optional Title")
 
+### Analysis
+
+
+### Procedure
 1. Minimize main.js
 2. Code optimations
 
