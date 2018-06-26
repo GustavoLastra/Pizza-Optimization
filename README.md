@@ -1,21 +1,17 @@
-## How to test the Optimizations done on this project
+# How to test the Optimizations done on this project
 
 1. Go to [My Project](https://gustavolastra.github.io/Website-Optimization/).
-2. Paste the links of a page from my project on [Google's Pagespeed tester](https://developers.google.com/speed/pagespeed/insights/).
+2. Paste the links of a page from my project on [Google's PageSpeed tester](https://developers.google.com/speed/pagespeed/insights/).
 
 
-### Task
-
+# Task
 ![Alt text](img/beforeOne.png?raw=true "Optional Title")
 
-#### Goal (Homepage)
-
+# Goal (Homepage)
 ![Alt text](img/rubric1.png?raw=true "Optional Title")
 
-### Analisys
-
-#### Critical Rendering Path  (Loading Performance)
-#####Tasks:
+# Critical Rendering Path Analysis (Loading Performance)
+## Tasks:
 1. Document Object Model (DOM)  construction
 ![Alt text](img/DOM.png?raw=true "Optional Title")
 2. CSS Object Model (CSSOM) construction
@@ -23,24 +19,23 @@
 3. Render Tree construction
 ![Alt text](img/RenderTree.png?raw=true "Optional Title")
 4. Javascript on the game:
-####Worst case scenario:
+## Worst case scenario:
 ![Alt text](img/worstcase.png?raw=true "Optional Title")
-####Best case scenario:
+## Best case scenario:
 ![Alt text](img/bestcase.png?raw=true "Optional Title")
 
-####PageSpeed recommendations and rules:
-#####JavaScript- und CSS-Code, die das Rendern blockieren, eliminieren
+# PageSpeed recommendations and rules:
+## JavaScript- und CSS-Code, die das Rendern blockieren, eliminieren
 1. JavaScript-Nutzung optimieren
 2. Asynchrone JavaScript-Ressourcen bevorzugen
 3. Parsen von JavaScript zurückstellen
 4. Lang ausgeführten JavaScript-Code vermeiden
-#####CSS-Nutzung optimieren
+## CSS-Nutzung optimieren
 1. CSS in den Dokumentenkopf einfügen
 2. CSS-Importe vermeiden
 3. Rendering-blockierendes CSS inline einfügen
 
-### Procedure
-
+# Procedure
 1. Data compression: Eliminating unnecessary data.
 2. Minification: deleting comments and whitespaces.
 3. Text compression with Gzip in js, css and html files.
@@ -49,24 +44,21 @@
 6. Convert images to binary files.
 7. Open Sans asynchronously
 
-#### Result
-
+# Result
 ![Alt text](img/pageSpeedOne.png?raw=true "Optional Title")
 
-#### Goal (Pizzapage)
-
-![Alt text](img/rubric2.png?raw=true "Optional Title")
-
-#### Task
-
+# Task
 ![Alt text](img/problem2.png?raw=true "Optional Title")
 
-### Analysis
+# Goal (Pizzapage)
+![Alt text](img/rubric2.png?raw=true "Optional Title")
+
+# Pixel Pipeline Analysis
 
 
-### Procedure
+# Procedure
 1. Minimize main.js
-2. Code optimations
+2. Code optimization
 
 ```
 / This for-loop actually creates and appends all of the pizzas when the page loads
@@ -136,7 +128,7 @@ function changePizzaSizes(size) {
 }
 ```
 
-#### Result
+# Result
 ![Alt text](img/after2and3.png?raw=true "Optional Title")
 
 Resize takes less than 5 ms
@@ -144,7 +136,7 @@ Resize takes less than 5 ms
 ![Alt text](img/less5.png?raw=true "Optional Title")
 
 
-### References
+# References
 
 1. [Rubric](https://review.udacity.com/#!/rubrics/16/view).
 2. [Css inliner](https://www.myintervals.com/emogrifier.php).
