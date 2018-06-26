@@ -92,7 +92,7 @@
 - Layout is normally scoped to the whole document.
 - The number of DOM elements will affect performance; you should avoid triggering layout wherever possible.
 - Assess layout model performance; new Flexbox is typically faster than older Flexbox or float-based layout models.
-The layout cost when using floats on 1,300 boxes. It is, admittedly, a contrived example, because most applications will use a variety of means to position elements.
+-- The layout cost when using floats on 1,300 boxes. It is, admittedly, a contrived example, because most applications will use a variety of means to position elements.
 1. Without Flexbox:
 ![Alt text](img/noFlexbox.png?raw=true "Optional Title")
 2. With Flexbox:
