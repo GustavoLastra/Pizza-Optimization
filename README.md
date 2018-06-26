@@ -196,9 +196,9 @@ Resize takes less than 5 ms
 # References
 
 1. [Rubric](https://review.udacity.com/#!/rubrics/16/view).
-2. [Css inliner](https://www.myintervals.com/emogrifier.php).
-3. [Google's Pagespeed tester](https://developers.google.com/speed/pagespeed/insights/).
-
+2. [Google's Pagespeed tester](https://developers.google.com/speed/pagespeed/insights/)
+3. [Css inliner](https://www.myintervals.com/emogrifier.php).
+4. [Google developers](https://developers.google.com/web/fundamentals/performance/rail).
 
 
 # Instructions from Udacity
